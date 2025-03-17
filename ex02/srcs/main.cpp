@@ -15,6 +15,7 @@ int main()
 
 	std::cout << eden;
 	std::cout << john;
+	std::cout << "\n";
 
 	john.signForm(tree);
 	john.signForm(robot);

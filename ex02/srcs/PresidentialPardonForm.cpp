@@ -17,7 +17,7 @@ PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPard
 	if (this != &other)
 	{
 		_target = other._target;
-
+		setIsSigned(other.getIsSigned());
 	}
 	return *this;
 }

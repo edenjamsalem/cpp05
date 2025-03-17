@@ -33,6 +33,11 @@ bool AForm::getIsSigned() const
 	return (_signed);
 }
 
+void	AForm::setIsSigned(bool isSigned)
+{
+	_signed = isSigned;
+}
+
 int AForm::getSignedGrade() const
 {
 	return (_signed_grade);

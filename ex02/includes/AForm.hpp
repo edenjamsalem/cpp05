@@ -27,6 +27,7 @@ class AForm
 
 		std::string getName() const;
 		bool getIsSigned() const;
+		void setIsSigned(bool isSigned);
 		int getSignedGrade() const;
 		int getExecuteGrade() const;
 		void beSigned(Bureaucrat &bureaucrat);
