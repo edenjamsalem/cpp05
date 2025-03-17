@@ -23,13 +23,13 @@ class Beaurocrat
 		void				incrementGrade();
 		void				decrementGrade();
 
-		class GradeTooHighError : std::exception
+		class GradeTooHighError : public std::exception
 		{
 			public:
 				virtual const char *what() const throw();
 		};
 
-		class GradeTooLowError : std::exception
+		class GradeTooLowError : public std::exception
 		{
 			public:
 				virtual const char *what() const throw();

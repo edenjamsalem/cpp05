@@ -42,14 +42,12 @@ void	Beaurocrat::setGrade(int grade)
 
 void	Beaurocrat::incrementGrade()
 {
-	if (_grade > 1)
-		_grade--;
+	setGrade(_grade - 1);
 }
 
 void	Beaurocrat::decrementGrade()
 {
-	if (_grade < 150)
-		_grade++;
+	setGrade(_grade + 1);
 }
 
 const char	*Beaurocrat::GradeTooHighError::what() const throw()
