@@ -25,7 +25,7 @@ const std::string	Bureaucrat::getName() const
 	return (_name);
 }
 
-int	Bureaucrat::getGrade()
+int	Bureaucrat::getGrade() const
 {
 	return (_grade);
 }
@@ -76,5 +76,18 @@ void Bureaucrat::signForm(AForm &form)
 	catch (std::exception &err)
 	{
 		std::cerr << getName() << " couldn't sign " << form << " because " << err.what() << std::endl;
+	}
+}
+
+void Bureaucrat::executeForm(AForm const &form) 
+{
+	try
+	{
+		std::cout << getName() << " executed form " << form.getName() << std::endl;
+		form.execute(*this);
+	}
+	catch (std::exception &err)
+	{
+		std::cerr << form.getName() << " could not be executed by " << getName() << " because " << err.what() << std::endl;
 	}
 }

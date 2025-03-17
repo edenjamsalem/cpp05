@@ -23,3 +23,13 @@ PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPard
 }
 
 PresidentialPardonForm::~PresidentialPardonForm() {}
+
+std::string PresidentialPardonForm::getTarget() const
+{
+	return (_target);
+}
+
+void PresidentialPardonForm::execute_action() const 
+{
+	std::cout << getTarget() << " has been pardoned by Trumpius Muskimus!\n";
+}

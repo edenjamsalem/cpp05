@@ -23,4 +23,15 @@ RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& o
 
 RobotomyRequestForm::~RobotomyRequestForm() {}
 
+std::string RobotomyRequestForm::getTarget() const
+{
+	return (_target);
+}
 
+void RobotomyRequestForm::execute_action() const
+{
+	if (rand() % 2 == 1)
+		std::cout << "*** drrrzzzsr TaKtAkTaKtAk drrrzzzsr *** " << getTarget() << " robotomized successfully.\n";
+	else
+		std::cout << "Robotomy failed.\n";
+}

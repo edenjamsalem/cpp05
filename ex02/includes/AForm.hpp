@@ -1,8 +1,11 @@
 #ifndef FORM_HPP
 #define FORM_HPP
 
-#include <iostream>
+#include <iostream> 
+#include <fstream> 
 #include <exception>
+#include <cstdlib>
+#include <ctime>
 #include "Bureaucrat.hpp"
 
 class Bureaucrat; 
@@ -28,6 +31,8 @@ class AForm
 		int getExecuteGrade() const;
 		void beSigned(Bureaucrat &bureaucrat);
 		void execute(Bureaucrat const & executor) const;
+		
+		virtual	void execute_action() const = 0;
 
 		class GradeTooHighException : public std::exception
 		{
@@ -35,6 +40,11 @@ class AForm
 				virtual const char *what() const throw();
 		};
 		class GradeTooLowException : public std::exception
+		{
+			public:
+				virtual const char *what() const throw();
+		};
+		class FormNotSignedException : public std::exception
 		{
 			public:
 				virtual const char *what() const throw();

@@ -23,3 +23,44 @@ ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationF
 }
 
 ShrubberyCreationForm::~ShrubberyCreationForm() {}
+
+
+std::string ShrubberyCreationForm::getTarget() const
+{
+	return (_target);
+}
+
+void ShrubberyCreationForm::execute_action() const
+{
+	std::ofstream outFile((getTarget() + std::string("_shrubbery")).c_str());
+
+	outFile << "                                              .\n\
+                                   .         ;\n\
+      .              .              ;%     ;;\n\
+        ,           ,                :;%  %;\n\
+         :         ;                   :;%;'     .,\n\
+,.        %;     %;            ;        %;'    ,;\n\
+  ;       ;%;  %%;        ,     %;    ;%;    ,%'\n\
+   %;       %;%;      ,  ;       %;  ;%;   ,%;'\n\
+    ;%;      %;        ;%;        % ;%;  ,%;'\n\
+     `%;.     ;%;     %;'         `;%%;.%;'\n\
+      `:;%.    ;%%. %@;        %; ;@%;%'\n\
+         `:%;.  :;bd%;          %;@%;'\n\
+           `@%:.  :;%.         ;@@%;'\n\
+             `@%.  `;@%.      ;@@%;\n\
+               `@%%. `@%%    ;@@%;\n\
+                 ;@%. :@%%  %@@%;\n\
+                   %@bd%%%bd%%:;\n\
+                     #@%%%%%:;;\n\
+                     %@@%%%::;\n\
+                     %@@@%(o);  . '\n\
+                     %@@@o%;:(.,'\n\
+                 `.. %@@@o%::;\n\
+                    `)@@@o%::;\n\
+                     %@@(o)::;\n\
+                    .%@@@@%::;\n\
+                    ;%@@@@%::;.\n\
+                   ;%@@@@%%:;;;.\n\
+               ...;%@@@@@%%:;;;;,..\n";
+    outFile.close();
+}

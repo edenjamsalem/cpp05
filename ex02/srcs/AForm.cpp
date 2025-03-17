@@ -61,6 +61,11 @@ const char	*AForm::GradeTooLowException::what() const throw()
 	return ("Grade too low!");
 }
 
+const char *AForm::FormNotSignedException::what() const throw()
+{
+	return ("Form not signed!");
+}
+
 std::ostream &operator <<(std::ostream &os, AForm &form)
 {
 	os << "AForm: "<< form.getName() << ", ";
@@ -68,4 +73,14 @@ std::ostream &operator <<(std::ostream &os, AForm &form)
 	os << "executeGrade: " << form.getExecuteGrade() << ", ";
 	os << "isSigned: " << form.getIsSigned();
 	return (os);
+}
+
+void AForm::execute(Bureaucrat const &executor) const
+{
+	if (getIsSigned() == false)
+		throw FormNotSignedException();
+	else if (executor.getGrade() > getExecuteGrade())
+		throw GradeTooLowException();
+	else	
+		execute_action();
 }
