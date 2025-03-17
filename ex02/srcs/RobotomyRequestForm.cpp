@@ -33,5 +33,10 @@ void RobotomyRequestForm::execute_action() const
 	if (rand() % 2 == 1)
 		std::cout << "*** drrrzzzsr TaKtAkTaKtAk drrrzzzsr *** " << getTarget() << " robotomized successfully.\n";
 	else
-		std::cout << "Robotomy failed.\n";
+		throw RobtomyFailedException();
+}
+
+const char *RobotomyRequestForm::RobtomyFailedException::what() const throw()
+{
+	return ("Robotomy failed!");
 }

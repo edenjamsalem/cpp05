@@ -19,6 +19,11 @@ class RobotomyRequestForm : public AForm
 		std::string getTarget() const;
 		void execute_action() const;
 		
+		class RobtomyFailedException : public std::exception
+		{
+			public:
+				virtual const char *what() const throw();
+		};
 };
 
 #endif
