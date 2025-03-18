@@ -6,9 +6,6 @@
 
 class Intern
 {
-	private:
-		
-
 	public:
 		Intern();
 		Intern(const Intern& other);
