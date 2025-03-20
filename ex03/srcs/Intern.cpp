@@ -18,7 +18,7 @@ Intern& Intern::operator=(const Intern& other)
 
 Intern::~Intern() {}
 
-void	Intern::formCreateMessage(std::string &form)
+void	formCreateMessage(std::string &form)
 {
 	std::cout << "Intern creates " << form << std::endl;
 }
