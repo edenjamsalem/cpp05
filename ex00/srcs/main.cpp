@@ -1,10 +1,10 @@
-#include "../includes/Beaurocrat.hpp"
+#include "../includes/Bureaucrat.hpp"
 
 int main()
 {
-	Beaurocrat eden;
-	Beaurocrat john("John", 1);
-	Beaurocrat harry(john);
+	Bureaucrat eden;
+	Bureaucrat john("John", 1);
+	Bureaucrat harry(john);
 
 	std::cout << eden;
 	std::cout << john;

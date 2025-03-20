@@ -3,9 +3,9 @@
 
 #include <iostream>
 #include <exception>
-#include "Beaurocrat.hpp"
+#include "Bureaucrat.hpp"
 
-class Beaurocrat; 
+class Bureaucrat; 
 
 class Form
 {
@@ -27,7 +27,7 @@ class Form
 		bool getIsSigned() const;
 		int getSignedGrade() const;
 		int getExecuteGrade() const;
-		void beSigned(Beaurocrat &beaurocrat);
+		void beSigned(Bureaucrat &bureaucrat);
 
 		class GradeTooHighException : public std::exception
 		{

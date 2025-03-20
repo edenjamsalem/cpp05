@@ -1,24 +1,24 @@
-#ifndef BEAUROCRAT_HPP
-#define BEAUROCRAT_HPP
+#ifndef bureaucrat_HPP
+#define bureaucrat_HPP
 
 #include <iostream>
 #include <exception>
 #include "Form.hpp"
 
-class Form; 
+class Form;
 
-class Beaurocrat
+class Bureaucrat
 {
 	private:
 		const std::string _name;
 		int _grade;
 
 	public:
-		Beaurocrat();
-		Beaurocrat(std::string name, int grade);
-		Beaurocrat(const Beaurocrat& other);
-		Beaurocrat& operator=(const Beaurocrat& other);
-		~Beaurocrat();
+		Bureaucrat();
+		Bureaucrat(std::string name, int grade);
+		Bureaucrat(const Bureaucrat& other);
+		Bureaucrat& operator=(const Bureaucrat& other);
+		~Bureaucrat();
 
 		const std::string	getName() const;
 		int					getGrade();
@@ -41,6 +41,6 @@ class Beaurocrat
 
 };
 
-std::ostream &operator <<(std::ostream &os, Beaurocrat &beaurocrat);
+std::ostream &operator <<(std::ostream &os, Bureaucrat &bureaucrat);
 
 #endif
